@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{AF38BFC0-5A7B-4E21-80B8-EF955349DE37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{8DC16F86-DFA7-47CB-94AA-EDD3B607BC8C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4A8589F4-7FB9-4023-A105-18D8856CDADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF38BFC0-5A7B-4E21-80B8-EF955349DE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF38BFC0-5A7B-4E21-80B8-EF955349DE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF38BFC0-5A7B-4E21-80B8-EF955349DE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF38BFC0-5A7B-4E21-80B8-EF955349DE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC16F86-DFA7-47CB-94AA-EDD3B607BC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC16F86-DFA7-47CB-94AA-EDD3B607BC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC16F86-DFA7-47CB-94AA-EDD3B607BC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC16F86-DFA7-47CB-94AA-EDD3B607BC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8589F4-7FB9-4023-A105-18D8856CDADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8589F4-7FB9-4023-A105-18D8856CDADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8589F4-7FB9-4023-A105-18D8856CDADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8589F4-7FB9-4023-A105-18D8856CDADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF134FE0-6578-415E-B7CC-27D6C94737B5}
+	EndGlobalSection
+EndGlobal

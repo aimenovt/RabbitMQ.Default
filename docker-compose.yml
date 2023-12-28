@@ -1,0 +1,51 @@
+version: "3.9"
+
+networks:
+  fin-app-dev:
+    driver: bridge
+
+services:
+  consumerapp: 
+    container_name: consumer
+    build:
+      context: ./Consumer
+      dockerfile: Dockerfile
+    networks:
+      - fin-app-dev
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: always
+
+  producerapp: 
+    container_name: producer
+    build:
+      context: ./Publisher
+      dockerfile: Dockerfile
+    networks:
+      - fin-app-dev
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: always
+
+  rabbitmq:
+    container_name: rabbit
+    image: rabbitmq:3.8-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    restart: always
+    networks:
+      - fin-app-dev
+    healthcheck:
+        test: rabbitmq-diagnostics -q ping
+        interval: 10s
+        timeout: 5s
+        retries: 3
+
+volumes:
+  postgres-data:
